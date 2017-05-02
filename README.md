@@ -1,24 +1,16 @@
-# README
+# Running app with docker
+Make sure you have installed Docker native then run the following commands
+```
+# build images
+docker-compose build
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Setup db
+docker-compose run app bundle exec rake db:create
+docker-compose run app bundle exec rake db:migrate
 
-Things you may want to cover:
+# Run rails server using CMD in Dockerfile
+docker-compose up
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Running test
+docker-compose run app bundle exec rake test
+```
