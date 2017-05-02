@@ -14,3 +14,7 @@ docker-compose up
 # Running test
 docker-compose run app bundle exec rake test
 ```
+
+# Todo
+- [ ] build on CI and push image up to ECR
+- [ ] Deploy onto ECS
